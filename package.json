@@ -4,7 +4,7 @@
   "description": "A middleware to load all controllers",
   "main": "lib/middleware.js",
   "engines": {
-    "node": ">=5.0"
+    "node": ">= 0.10.0"
   },
   "files": [
     "lib"
