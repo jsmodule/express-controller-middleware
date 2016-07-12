@@ -1,6 +1,6 @@
 {
   "name": "express-controller-middleware",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A middleware to load all controllers",
   "main": "lib/middleware.js",
   "engines": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsmodule/controller-middleware.git"
+    "url": "git+https://github.com/jsmodule/express-controller-middleware.git"
   },
   "keywords": [
     "nodejs",
@@ -27,9 +27,9 @@
   "author": "thomascxq",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jsmodule/controller-middleware/issues"
+    "url": "https://github.com/jsmodule/express-controller-middleware/issues"
   },
-  "homepage": "https://github.com/jsmodule/controller-middleware#readme",
+  "homepage": "https://github.com/jsmodule/express-controller-middleware#readme",
   "dependencies": {
     "express": "^4.14.0"
   }
