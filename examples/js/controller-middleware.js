@@ -5,6 +5,7 @@ const controllerPath = path.join(__dirname, './controllers');
 const middleware = new ControllerMiddleware(controllerPath);
 
 middleware.use('/hello', 'HelloController');
-middleware.use('/Test', 'TestController');
+middleware.get('/test/index', 'TestController#index');
+middleware.get('/test/show', 'TestController#show');
 
 module.exports = middleware;

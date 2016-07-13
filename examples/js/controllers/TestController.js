@@ -1,3 +1,6 @@
-module.exports = function(req, res, next) {
-  res.send("Hello Test");
+exports.index = function(req, res) {
+  res.send("Hello Index");
 };
+exports.show = function(req, res) {
+  res.send("Hello Show");
+}
