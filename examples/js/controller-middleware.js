@@ -1,5 +1,5 @@
 const path = require('path');
-const ControllerMiddleware = require('../../lib/middleware');
+const ControllerMiddleware = require('../../lib');
 
 const controllerPath = path.join(__dirname, './controllers');
 const middleware = new ControllerMiddleware(controllerPath);
