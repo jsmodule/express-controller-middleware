@@ -94,6 +94,56 @@ const middleware = new ExpressControllerMiddleware();
 middleware.setPath(path.join(__dirname, './controllers'));
 ```
 
+### Set custom FileLoader.
+
+* Create a custom FileLoader like this:
+
+```js
+function CustomFileLoader() {}
+
+// Must have this method.
+CustomFileLoader.prototype.loadControllers = function(controllerPath) {
+  ...
+}
+
+module.exports = CustomFileLoader;
+```
+
+* Config CustomFileLoader into middleware config file.
+
+```js
+const ExpressControllerMiddleware = require('express-controller-middleware');
+const CustomFileLoader = require('./CustomFileLoader');
+
+const middleware = new ExpressControllerMiddleware();
+middleware.setFileLoader(new CustomFileLoader());
+```
+
+### Set custom ActionLoader.
+
+* Create a custom ActionLoader like this:
+
+```js
+function CustomActionLoader() {}
+
+// Must have this method.
+CustomActionLoader.prototype.loadAction = function(controller, actionName) {
+  ...
+}
+
+module.exports = CustomActionLoader;
+```
+
+* Config CustomActionLoader into middleware.
+
+```js
+const ExpressControllerMiddleware = require('express-controller-middleware');
+const CustomActionLoader = require('./CustomActionLoader');
+
+const middleware = new ExpressControllerMiddleware();
+middleware.setActionLoader(new CustomActionLoader());
+```
+
 ### Config your routes.
 
 This component support all methods which supported by `express`.
