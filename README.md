@@ -102,7 +102,7 @@ middleware.setPath(path.join(__dirname, './controllers'));
 function CustomFileLoader() {}
 
 // Must have this method.
-CustomFileLoader.prototype.loadControllers = function(controllerPath) {
+CustomFileLoader.prototype.loadControllerFiles = function(controllerPath) {
   ...
 }
 
@@ -117,6 +117,31 @@ const CustomFileLoader = require('./CustomFileLoader');
 
 const middleware = new ExpressControllerMiddleware();
 middleware.setFileLoader(new CustomFileLoader());
+```
+
+### Set custom ControllerLoader.
+
+* Create a custom ControllerLoader like this:
+
+```js
+function CustomControllerLoader() {}
+
+// Must have this method.
+CustomControllerLoader.prototype.loadController = function(controllerFile) {
+  ...
+}
+
+module.exports = CustomControllerLoader;
+```
+
+* Config CustomControllerLoader into middleware config file.
+
+```js
+const ExpressControllerMiddleware = require('express-controller-middleware');
+const CustomControllerLoader = require('./CustomControllerLoader');
+
+const middleware = new ExpressControllerMiddleware();
+middleware.setControllerLoader(new CustomControllerLoader());
 ```
 
 ### Set custom ActionLoader.
