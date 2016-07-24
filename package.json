@@ -1,6 +1,6 @@
 {
   "name": "express-controller-middleware",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A middleware to load all controllers",
   "main": "lib/index.js",
   "engines": {
