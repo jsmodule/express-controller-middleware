@@ -2,6 +2,8 @@
 
 This is a middleware to load all controllers.
 
+**NOTE:** this is a **deprecated** system. You can use this [express-common-router](https://www.npmjs.com/package/express-common-router) to instead.
+
 ## Installation
 
 ```
